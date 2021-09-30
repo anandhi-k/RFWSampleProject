@@ -1,3 +1,3 @@
 F:
-cd F:\Anandhi\workspace\robotframework\FirstSampleProject
+cd F:\Anandhi\workspace\robotframework\RWFSampleProject
 robot -d Results parallelTests\*.robot
