@@ -1,0 +1,15 @@
+==============================================================================
+parallelTests                                                                 
+==============================================================================
+parallelTests.ScrollTC                                                        
+==============================================================================
+Scroll Test                                                           | FAIL |
+Element with locator 'xpath=//button[contains(text(), 'Alert Box')]' not found.
+------------------------------------------------------------------------------
+parallelTests.ScrollTC                                                | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+parallelTests                                                         | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  F:\Anandhi\workspace\robotframework\FirstSampleProj\pabot_results\0\output.xml

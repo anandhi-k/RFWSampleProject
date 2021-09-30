@@ -1,0 +1,6 @@
+loginLink="xpath://a[@id='login2']"
+loginmodal="class:modal-content"
+loginid="id:loginusername"
+loginpwd="id:loginpassword"
+loginBtn="xpath://div[@class='modal-content']//button[contains(text(), 'Log in')]"
+userDisplay="id:nameofuser"

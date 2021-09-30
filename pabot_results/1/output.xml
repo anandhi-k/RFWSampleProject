@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.1 (Python 3.9.1 on win32)" generated="20210922 12:14:06.222" rpa="false" schemaversion="2">
+<suite id="s1" name="parallelTests" source="F:\Anandhi\workspace\robotframework\FirstSampleProj\parallelTests">
+<suite id="s1-s1" name="VariableSample" source="F:\Anandhi\workspace\robotframework\FirstSampleProj\parallelTests\VariableSample.robot">
+<test id="s1-s1-t1" name="Print Scalar Variable Values">
+<kw name="Log" library="BuiltIn">
+<arg>${BROWSER}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210922 12:14:13.909" level="INFO">chrome</msg>
+<status status="PASS" starttime="20210922 12:14:13.908" endtime="20210922 12:14:13.910"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>This ${BROWSER} session has delay time of ${DELAY} Seconds</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210922 12:14:13.911" level="INFO">This chrome session has delay time of 5 Seconds</msg>
+<status status="PASS" starttime="20210922 12:14:13.910" endtime="20210922 12:14:13.912"/>
+</kw>
+<status status="PASS" starttime="20210922 12:14:13.905" endtime="20210922 12:14:13.912"/>
+</test>
+<test id="s1-s1-t2" name="Using List">
+<kw name="Create List" library="BuiltIn">
+<var>@{userDetail}</var>
+<arg>John</arg>
+<arg>Peter</arg>
+<arg>aaa@gmail.com</arg>
+<arg>9778655</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20210922 12:14:13.916" level="INFO">@{userDetail} = [ John | Peter | aaa@gmail.com | 9778655 ]</msg>
+<status status="PASS" starttime="20210922 12:14:13.915" endtime="20210922 12:14:13.916"/>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<arg>@{userDetail}</arg>
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<msg timestamp="20210922 12:14:13.918" level="INFO">John</msg>
+<msg timestamp="20210922 12:14:13.918" level="INFO">Peter</msg>
+<msg timestamp="20210922 12:14:13.918" level="INFO">aaa@gmail.com</msg>
+<msg timestamp="20210922 12:14:13.918" level="INFO">9778655</msg>
+<status status="PASS" starttime="20210922 12:14:13.917" endtime="20210922 12:14:13.918"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>"First Name : ",${userDetail}[1]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210922 12:14:13.920" level="INFO">"First Name : ",Peter</msg>
+<status status="PASS" starttime="20210922 12:14:13.919" endtime="20210922 12:14:13.920"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.demoblaze.com/#</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210922 12:14:13.922" level="INFO">Opening browser 'chrome' to base url 'https://www.demoblaze.com/#'.</msg>
+<status status="PASS" starttime="20210922 12:14:13.921" endtime="20210922 12:14:39.689"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210922 12:14:44.698" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210922 12:14:39.689" endtime="20210922 12:14:44.699"/>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>@{elements_list}</var>
+<arg>xpath=//h4[@class='card-title']/a</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20210922 12:14:44.740" level="INFO">@{elements_list} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="f1e1bb7b2c518c3444d65702f7dca151", element="afbcfa47-9dc0-4bc1-9c93-166f78b7b390")&gt; | &lt;selenium.webdriver.remote.webelement.WebElement (ses...</msg>
+<status status="PASS" starttime="20210922 12:14:44.701" endtime="20210922 12:14:44.740"/>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<arg>@{elements_list}</arg>
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<msg timestamp="20210922 12:14:44.741" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="f1e1bb7b2c518c3444d65702f7dca151", element="afbcfa47-9dc0-4bc1-9c93-166f78b7b390")&gt;</msg>
+<msg timestamp="20210922 12:14:44.741" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="f1e1bb7b2c518c3444d65702f7dca151", element="3813fbff-e8f4-43e6-a93d-c045a91527e7")&gt;</msg>
+<msg timestamp="20210922 12:14:44.741" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="f1e1bb7b2c518c3444d65702f7dca151", element="a75aba96-e405-4a34-95c1-313bc555b75d")&gt;</msg>
+<msg timestamp="20210922 12:14:44.741" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="f1e1bb7b2c518c3444d65702f7dca151", element="7bd26a0f-3041-4ed3-b8a1-f42ba912139f")&gt;</msg>
+<msg timestamp="20210922 12:14:44.741" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="f1e1bb7b2c518c3444d65702f7dca151", element="bffa5df7-b4bf-456a-9c14-facd1925ec91")&gt;</msg>
+<msg timestamp="20210922 12:14:44.741" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="f1e1bb7b2c518c3444d65702f7dca151", element="5bfd2096-d621-448e-9a23-69134e2d52a8")&gt;</msg>
+<msg timestamp="20210922 12:14:44.742" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="f1e1bb7b2c518c3444d65702f7dca151", element="02bcbe94-3c5b-4baa-876e-cde9f4c22e90")&gt;</msg>
+<msg timestamp="20210922 12:14:44.742" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="f1e1bb7b2c518c3444d65702f7dca151", element="ab432349-0384-476e-b310-f71b446d698c")&gt;</msg>
+<msg timestamp="20210922 12:14:44.742" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="f1e1bb7b2c518c3444d65702f7dca151", element="854511cd-6abc-44fc-944e-2cccb65adc02")&gt;</msg>
+<status status="PASS" starttime="20210922 12:14:44.740" endtime="20210922 12:14:44.742"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210922 12:14:44.742" endtime="20210922 12:14:51.939"/>
+</kw>
+<status status="PASS" starttime="20210922 12:14:13.913" endtime="20210922 12:14:51.940"/>
+</test>
+<test id="s1-s1-t3" name="Using Dictionary">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>&amp;{dictItems}</var>
+<arg>a=10</arg>
+<arg>b=20</arg>
+<arg>c={30,40,50}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20210922 12:14:52.079" level="INFO">&amp;{dictItems} = { a=10 | b=20 | c={30,40,50} }</msg>
+<status status="PASS" starttime="20210922 12:14:52.075" endtime="20210922 12:14:52.079"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>"Value of a",${dictItems.a}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210922 12:14:52.088" level="INFO">"Value of a",10</msg>
+<status status="PASS" starttime="20210922 12:14:52.080" endtime="20210922 12:14:52.088"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Value of b",${dictItems}[b]</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210922 12:14:52.089" endtime="20210922 12:14:52.091"/>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<arg>"Items in Dictionary",&amp;{dictItems}</arg>
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<msg timestamp="20210922 12:14:52.095" level="INFO">"Items in Dictionary",{'a': '10', 'b': '20', 'c': '{30,40,50}'}</msg>
+<status status="PASS" starttime="20210922 12:14:52.092" endtime="20210922 12:14:52.095"/>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<arg>"Value of c",${dictItems}[c]</arg>
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<msg timestamp="20210922 12:14:52.098" level="INFO">"Value of c",{30,40,50}</msg>
+<status status="PASS" starttime="20210922 12:14:52.096" endtime="20210922 12:14:52.098"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>"Item in c",${dictItems}[c][2]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210922 12:14:52.101" level="INFO">"Item in c",0</msg>
+<status status="PASS" starttime="20210922 12:14:52.099" endtime="20210922 12:14:52.102"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>&amp;{user}</var>
+<arg>name=John</arg>
+<arg>password=welcome123</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20210922 12:14:52.106" level="INFO">&amp;{user} = { name=John | password=welcome123 }</msg>
+<status status="PASS" starttime="20210922 12:14:52.103" endtime="20210922 12:14:52.106"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>"UserName is :",${user}[name], "Password is :",${user.password}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210922 12:14:52.111" level="INFO">"UserName is :",John, "Password is :",welcome123</msg>
+<status status="PASS" starttime="20210922 12:14:52.107" endtime="20210922 12:14:52.112"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${user}[name]</arg>
+<arg>John</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20210922 12:14:52.112" endtime="20210922 12:14:52.114"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>&amp;{books}</var>
+<arg>book1={id=1, name=Robot}</arg>
+<arg>book2={id=2, name=Python}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20210922 12:14:52.116" level="INFO">&amp;{books} = { book1={id=1, name=Robot} | book2={id=2, name=Python} }</msg>
+<status status="PASS" starttime="20210922 12:14:52.115" endtime="20210922 12:14:52.117"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>"List of books : ",${books}[book1]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210922 12:14:52.119" level="INFO">"List of books : ",{id=1, name=Robot}</msg>
+<status status="PASS" starttime="20210922 12:14:52.117" endtime="20210922 12:14:52.119"/>
+</kw>
+<status status="PASS" starttime="20210922 12:14:52.073" endtime="20210922 12:14:52.120"/>
+</test>
+<test id="s1-s1-t4" name="Using Environment Variable">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${url.dev}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210922 12:14:52.123" endtime="20210922 12:14:52.127"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${url.${env}}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210922 12:14:52.128" endtime="20210922 12:14:52.132"/>
+</kw>
+<status status="PASS" starttime="20210922 12:14:52.121" endtime="20210922 12:14:52.132"/>
+</test>
+<test id="s1-s1-t5" name="Environment variables">
+<kw name="Log" library="BuiltIn">
+<arg>Current user: %{USERNAME}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210922 12:14:52.136" level="INFO">Current user: Anandhi</msg>
+<status status="PASS" starttime="20210922 12:14:52.135" endtime="20210922 12:14:52.137"/>
+</kw>
+<kw name="Run" library="OperatingSystem">
+<arg>%{JAVA_HOME}${/}javac</arg>
+<doc>Runs the given command in the system and returns the output.</doc>
+<msg timestamp="20210922 12:14:52.512" level="INFO">Running command 'C:\Program Files\Java\jdk1.8.0_202\javac 2&gt;&amp;1'.</msg>
+<status status="PASS" starttime="20210922 12:14:52.137" endtime="20210922 12:14:52.953"/>
+</kw>
+<status status="PASS" starttime="20210922 12:14:52.134" endtime="20210922 12:14:52.953"/>
+</test>
+<status status="PASS" starttime="20210922 12:14:06.635" endtime="20210922 12:14:52.955"/>
+</suite>
+<status status="PASS" starttime="20210922 12:14:06.428" endtime="20210922 12:14:52.958"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="5" fail="0" skip="0" id="s1" name="parallelTests">parallelTests</stat>
+<stat pass="5" fail="0" skip="0" id="s1-s1" name="VariableSample">parallelTests.VariableSample</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

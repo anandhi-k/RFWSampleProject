@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.1 (Python 3.9.1 on win32)" generated="20210922 12:14:06.625" rpa="false" schemaversion="2">
+<suite id="s1" name="parallelTests" source="F:\Anandhi\workspace\robotframework\FirstSampleProj\parallelTests">
+<suite id="s1-s1" name="ScrollTC" source="F:\Anandhi\workspace\robotframework\FirstSampleProj\parallelTests\ScrollTC.robot">
+<test id="s1-s1-t1" name="Scroll Test">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.testandquiz.com/selenium/testing.html</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210922 12:14:13.776" level="INFO">Opening browser 'chrome' to base url 'https://www.testandquiz.com/selenium/testing.html'.</msg>
+<status status="PASS" starttime="20210922 12:14:13.766" endtime="20210922 12:14:41.842"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210922 12:14:41.843" endtime="20210922 12:14:42.116"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210922 12:14:45.118" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210922 12:14:42.116" endtime="20210922 12:14:45.118"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>xpath=//button[contains(text(), 'Alert Box')]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210922 12:14:45.559" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210922 12:14:45.131" endtime="20210922 12:14:45.559"/>
+</kw>
+<msg timestamp="20210922 12:14:45.651" level="FAIL">Element with locator 'xpath=//button[contains(text(), 'Alert Box')]' not found.</msg>
+<status status="FAIL" starttime="20210922 12:14:45.118" endtime="20210922 12:14:45.651"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20210922 12:14:45.652" endtime="20210922 12:14:45.652"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,document.body.ScrollHeight)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" starttime="20210922 12:14:45.653" endtime="20210922 12:14:45.653"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20210922 12:14:45.655" endtime="20210922 12:14:45.655"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,900)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" starttime="20210922 12:14:45.655" endtime="20210922 12:14:45.655"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20210922 12:14:45.656" endtime="20210922 12:14:45.656"/>
+</kw>
+<status status="FAIL" starttime="20210922 12:14:13.765" endtime="20210922 12:14:45.657">Element with locator 'xpath=//button[contains(text(), 'Alert Box')]' not found.</status>
+</test>
+<status status="FAIL" starttime="20210922 12:14:06.724" endtime="20210922 12:14:45.660"/>
+</suite>
+<status status="FAIL" starttime="20210922 12:14:06.632" endtime="20210922 12:14:45.669"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="parallelTests">parallelTests</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="ScrollTC">parallelTests.ScrollTC</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

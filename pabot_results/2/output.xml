@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.1 (Python 3.9.1 on win32)" generated="20210922 12:14:06.222" rpa="false" schemaversion="2">
+<suite id="s1" name="parallelTests" source="F:\Anandhi\workspace\robotframework\FirstSampleProj\parallelTests">
+<suite id="s1-s1" name="WebTableTC" source="F:\Anandhi\workspace\robotframework\FirstSampleProj\parallelTests\WebTableTC.robot">
+<test id="s1-s1-t1" name="WebTable Validations">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.seleniumeasy.com/test/table-sort-search-demo.html</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210922 12:14:13.780" level="INFO">Opening browser 'chrome' to base url 'https://www.seleniumeasy.com/test/table-sort-search-demo.html'.</msg>
+<status status="PASS" starttime="20210922 12:14:13.779" endtime="20210922 12:14:38.703"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${row}</var>
+<arg>xpath=//table[@id='example']/tbody/tr</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20210922 12:14:39.510" level="INFO">${row} = 10</msg>
+<status status="PASS" starttime="20210922 12:14:38.703" endtime="20210922 12:14:39.510"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${col}</var>
+<arg>xpath=//table[@id='example']/thead/tr/th</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20210922 12:14:39.528" level="INFO">${col} = 6</msg>
+<status status="PASS" starttime="20210922 12:14:39.510" endtime="20210922 12:14:39.529"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Number of Rows: ",${row}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210922 12:14:39.529" endtime="20210922 12:14:39.530"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Number of Col : ",${col}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210922 12:14:39.530" endtime="20210922 12:14:39.531"/>
+</kw>
+<kw name="Get Table Cell" library="SeleniumLibrary">
+<var>${cellData}</var>
+<arg>xpath=//table[@id='example']</arg>
+<arg>4</arg>
+<arg>3</arg>
+<doc>Returns contents of a table cell.</doc>
+<msg timestamp="20210922 12:14:39.904" level="INFO">${cellData} = Tokyo</msg>
+<status status="PASS" starttime="20210922 12:14:39.531" endtime="20210922 12:14:39.904"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Data in a cell(4,3): ",${cellData}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210922 12:14:39.904" endtime="20210922 12:14:39.905"/>
+</kw>
+<kw name="Table Cell Should Contain" library="SeleniumLibrary">
+<arg>xpath=//table[@id='example']</arg>
+<arg>4</arg>
+<arg>3</arg>
+<arg>Tokyo</arg>
+<doc>Verifies table cell contains text ``expected``.</doc>
+<msg timestamp="20210922 12:14:39.958" level="INFO">Table cell contains 'Tokyo'.</msg>
+<status status="PASS" starttime="20210922 12:14:39.905" endtime="20210922 12:14:39.958"/>
+</kw>
+<kw name="Table Column Should Contain" library="SeleniumLibrary">
+<arg>xpath=//table[@id='example']</arg>
+<arg>3</arg>
+<arg>Office</arg>
+<doc>Verifies table column contains text ``expected``.</doc>
+<status status="PASS" starttime="20210922 12:14:39.958" endtime="20210922 12:14:40.001"/>
+</kw>
+<kw name="Table Row Should Contain" library="SeleniumLibrary">
+<arg>xpath=//table[@id='example']</arg>
+<arg>8</arg>
+<arg>Edinburgh</arg>
+<doc>Verifies that table row contains text ``expected``.</doc>
+<status status="PASS" starttime="20210922 12:14:40.001" endtime="20210922 12:14:40.051"/>
+</kw>
+<kw name="Table Should Contain" library="SeleniumLibrary">
+<arg>xpath=//table[@id='example']</arg>
+<arg>Pre-Sales Support</arg>
+<doc>Verifies table contains text ``expected``.</doc>
+<status status="PASS" starttime="20210922 12:14:40.052" endtime="20210922 12:14:40.324"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210922 12:14:40.324" endtime="20210922 12:14:49.964"/>
+</kw>
+<status status="PASS" starttime="20210922 12:14:13.778" endtime="20210922 12:14:49.964"/>
+</test>
+<status status="PASS" starttime="20210922 12:14:06.635" endtime="20210922 12:14:49.965"/>
+</suite>
+<status status="PASS" starttime="20210922 12:14:06.427" endtime="20210922 12:14:49.975"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="parallelTests">parallelTests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="WebTableTC">parallelTests.WebTableTC</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

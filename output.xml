@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.1 on win32)" generated="20210929 21:45:36.618" rpa="false">
+<suite id="s1" name="parallelTests" source="F:\Anandhi\workspace\robotframework\FirstSampleProject\parallelTests">
+<suite id="s1-s1" name="ScrollTC" source="F:\Anandhi\workspace\robotframework\FirstSampleProject\parallelTests\ScrollTC.robot">
+<test id="s1-s1-t1" name="Scroll Test">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>https://demo.opencart.com/</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20210929 21:45:37.693" level="INFO">Opening browser 'chrome' to base url 'https://demo.opencart.com/'.</msg>
+<status status="PASS" starttime="20210929 21:45:37.692" endtime="20210929 21:45:49.792"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210929 21:45:49.793" endtime="20210929 21:45:50.256"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20210929 21:45:55.264" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210929 21:45:50.257" endtime="20210929 21:45:55.264"></status>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>window.scrollTo(0,900)</arg>
+</arguments>
+<msg timestamp="20210929 21:45:55.267" level="INFO">Executing JavaScript:
+window.scrollTo(0,900)
+Without any arguments.</msg>
+<status status="PASS" starttime="20210929 21:45:55.266" endtime="20210929 21:45:55.549"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20210929 21:45:58.564" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210929 21:45:55.550" endtime="20210929 21:45:58.564"></status>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>id=cart</arg>
+</arguments>
+<status status="PASS" starttime="20210929 21:45:58.565" endtime="20210929 21:45:58.971"></status>
+</kw>
+<status status="PASS" starttime="20210929 21:45:37.686" endtime="20210929 21:45:58.972" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20210929 21:45:36.704" endtime="20210929 21:45:58.973"></status>
+</suite>
+<suite id="s1-s2" name="VariableSample" source="F:\Anandhi\workspace\robotframework\FirstSampleProject\parallelTests\VariableSample.robot">
+<test id="s1-s2-t1" name="Print Scalar Variable Values">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20210929 21:45:59.021" level="INFO">chrome</msg>
+<status status="PASS" starttime="20210929 21:45:59.020" endtime="20210929 21:45:59.021"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>This ${BROWSER} session has delay time of ${DELAY} Seconds</arg>
+</arguments>
+<msg timestamp="20210929 21:45:59.022" level="INFO">This chrome session has delay time of 5 Seconds</msg>
+<status status="PASS" starttime="20210929 21:45:59.021" endtime="20210929 21:45:59.022"></status>
+</kw>
+<status status="PASS" starttime="20210929 21:45:59.020" endtime="20210929 21:45:59.022" critical="yes"></status>
+</test>
+<test id="s1-s2-t2" name="Using List">
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<arguments>
+<arg>John</arg>
+<arg>Peter</arg>
+<arg>aaa@gmail.com</arg>
+<arg>9778655</arg>
+</arguments>
+<assign>
+<var>@{userDetail}</var>
+</assign>
+<msg timestamp="20210929 21:45:59.029" level="INFO">@{userDetail} = [ John | Peter | aaa@gmail.com | 9778655 ]</msg>
+<status status="PASS" starttime="20210929 21:45:59.029" endtime="20210929 21:45:59.029"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>@{userDetail}</arg>
+</arguments>
+<msg timestamp="20210929 21:45:59.030" level="INFO">John</msg>
+<msg timestamp="20210929 21:45:59.030" level="INFO">Peter</msg>
+<msg timestamp="20210929 21:45:59.030" level="INFO">aaa@gmail.com</msg>
+<msg timestamp="20210929 21:45:59.030" level="INFO">9778655</msg>
+<status status="PASS" starttime="20210929 21:45:59.030" endtime="20210929 21:45:59.030"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>"First Name : ",${userDetail}[1]</arg>
+</arguments>
+<msg timestamp="20210929 21:45:59.031" level="INFO">"First Name : ",Peter</msg>
+<status status="PASS" starttime="20210929 21:45:59.031" endtime="20210929 21:45:59.031"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>https://www.demoblaze.com/#</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20210929 21:45:59.032" level="INFO">Opening browser 'chrome' to base url 'https://www.demoblaze.com/#'.</msg>
+<status status="PASS" starttime="20210929 21:45:59.032" endtime="20210929 21:46:08.734"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20210929 21:46:13.742" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210929 21:46:08.735" endtime="20210929 21:46:13.743"></status>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<arguments>
+<arg>xpath=//h4[@class='card-title']/a</arg>
+</arguments>
+<assign>
+<var>@{elements_list}</var>
+</assign>
+<msg timestamp="20210929 21:46:13.782" level="INFO">@{elements_list} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="f9d0f107a22900f09db7885f96759bcb", element="c0040c19-18fd-4303-8bc2-61a87c65da31")&gt; | &lt;selenium.webdriver.remote.webelement.WebElement (ses...</msg>
+<status status="PASS" starttime="20210929 21:46:13.743" endtime="20210929 21:46:13.782"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>@{elements_list}</arg>
+</arguments>
+<msg timestamp="20210929 21:46:13.783" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="f9d0f107a22900f09db7885f96759bcb", element="c0040c19-18fd-4303-8bc2-61a87c65da31")&gt;</msg>
+<msg timestamp="20210929 21:46:13.783" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="f9d0f107a22900f09db7885f96759bcb", element="4550f8f8-962c-45eb-a89a-1b7a94e1c6e1")&gt;</msg>
+<msg timestamp="20210929 21:46:13.783" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="f9d0f107a22900f09db7885f96759bcb", element="6dff7bfe-f083-4765-93da-30e812952afb")&gt;</msg>
+<msg timestamp="20210929 21:46:13.783" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="f9d0f107a22900f09db7885f96759bcb", element="fd0369e7-a224-4cca-9200-3581db31fcb0")&gt;</msg>
+<msg timestamp="20210929 21:46:13.784" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="f9d0f107a22900f09db7885f96759bcb", element="12a27c4f-84a9-4975-98b6-e5c6b140becd")&gt;</msg>
+<msg timestamp="20210929 21:46:13.784" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="f9d0f107a22900f09db7885f96759bcb", element="684b7e27-7bb3-4fbb-b6ac-011b50f11bd3")&gt;</msg>
+<msg timestamp="20210929 21:46:13.784" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="f9d0f107a22900f09db7885f96759bcb", element="16e204ab-69c4-4391-8437-dde96246df82")&gt;</msg>
+<msg timestamp="20210929 21:46:13.784" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="f9d0f107a22900f09db7885f96759bcb", element="54beb374-23d4-4302-8c03-557ec4aec996")&gt;</msg>
+<msg timestamp="20210929 21:46:13.784" level="INFO">&lt;selenium.webdriver.remote.webelement.WebElement (session="f9d0f107a22900f09db7885f96759bcb", element="e4be81cd-281b-490a-81c5-d4a8f9e70aa6")&gt;</msg>
+<status status="PASS" starttime="20210929 21:46:13.783" endtime="20210929 21:46:13.784"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210929 21:46:13.785" endtime="20210929 21:46:19.157"></status>
+</kw>
+<status status="PASS" starttime="20210929 21:45:59.028" endtime="20210929 21:46:19.157" critical="yes"></status>
+</test>
+<test id="s1-s2-t3" name="Using Dictionary">
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>a=10</arg>
+<arg>b=20</arg>
+<arg>c={30,40,50}</arg>
+</arguments>
+<assign>
+<var>&amp;{dictItems}</var>
+</assign>
+<msg timestamp="20210929 21:46:19.160" level="INFO">&amp;{dictItems} = { a=10 | b=20 | c={30,40,50} }</msg>
+<status status="PASS" starttime="20210929 21:46:19.159" endtime="20210929 21:46:19.160"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>"Value of a",${dictItems.a}</arg>
+</arguments>
+<msg timestamp="20210929 21:46:19.161" level="INFO">"Value of a",10</msg>
+<status status="PASS" starttime="20210929 21:46:19.160" endtime="20210929 21:46:19.161"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>"Value of b",${dictItems}[b]</arg>
+</arguments>
+<status status="PASS" starttime="20210929 21:46:19.162" endtime="20210929 21:46:19.162"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>"Items in Dictionary",&amp;{dictItems}</arg>
+</arguments>
+<msg timestamp="20210929 21:46:19.163" level="INFO">"Items in Dictionary",{'a': '10', 'b': '20', 'c': '{30,40,50}'}</msg>
+<status status="PASS" starttime="20210929 21:46:19.163" endtime="20210929 21:46:19.163"></status>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>"Value of c",${dictItems}[c]</arg>
+</arguments>
+<msg timestamp="20210929 21:46:19.164" level="INFO">"Value of c",{30,40,50}</msg>
+<status status="PASS" starttime="20210929 21:46:19.163" endtime="20210929 21:46:19.164"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>"Item in c",${dictItems}[c][2]</arg>
+</arguments>
+<msg timestamp="20210929 21:46:19.165" level="INFO">"Item in c",0</msg>
+<status status="PASS" starttime="20210929 21:46:19.164" endtime="20210929 21:46:19.165"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>name=John</arg>
+<arg>password=welcome123</arg>
+</arguments>
+<assign>
+<var>&amp;{user}</var>
+</assign>
+<msg timestamp="20210929 21:46:19.165" level="INFO">&amp;{user} = { name=John | password=welcome123 }</msg>
+<status status="PASS" starttime="20210929 21:46:19.165" endtime="20210929 21:46:19.165"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>"UserName is :",${user}[name], "Password is :",${user.password}</arg>
+</arguments>
+<msg timestamp="20210929 21:46:19.166" level="INFO">"UserName is :",John, "Password is :",welcome123</msg>
+<status status="PASS" starttime="20210929 21:46:19.166" endtime="20210929 21:46:19.166"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${user}[name]</arg>
+<arg>John</arg>
+</arguments>
+<status status="PASS" starttime="20210929 21:46:19.166" endtime="20210929 21:46:19.167"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>book1={id=1, name=Robot}</arg>
+<arg>book2={id=2, name=Python}</arg>
+</arguments>
+<assign>
+<var>&amp;{books}</var>
+</assign>
+<msg timestamp="20210929 21:46:19.168" level="INFO">&amp;{books} = { book1={id=1, name=Robot} | book2={id=2, name=Python} }</msg>
+<status status="PASS" starttime="20210929 21:46:19.167" endtime="20210929 21:46:19.168"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>"List of books : ",${books}[book1]</arg>
+</arguments>
+<msg timestamp="20210929 21:46:19.172" level="INFO">"List of books : ",{id=1, name=Robot}</msg>
+<status status="PASS" starttime="20210929 21:46:19.171" endtime="20210929 21:46:19.172"></status>
+</kw>
+<status status="PASS" starttime="20210929 21:46:19.159" endtime="20210929 21:46:19.172" critical="yes"></status>
+</test>
+<test id="s1-s2-t4" name="Using Environment Variable">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${url.dev}</arg>
+</arguments>
+<status status="PASS" starttime="20210929 21:46:19.178" endtime="20210929 21:46:19.179"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${url.${env}}</arg>
+</arguments>
+<status status="PASS" starttime="20210929 21:46:19.179" endtime="20210929 21:46:19.180"></status>
+</kw>
+<status status="PASS" starttime="20210929 21:46:19.177" endtime="20210929 21:46:19.181" critical="yes"></status>
+</test>
+<test id="s1-s2-t5" name="Environment variables">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Current user: %{USERNAME}</arg>
+</arguments>
+<msg timestamp="20210929 21:46:19.184" level="INFO">Current user: Anandhi</msg>
+<status status="PASS" starttime="20210929 21:46:19.183" endtime="20210929 21:46:19.184"></status>
+</kw>
+<kw name="Run" library="OperatingSystem">
+<doc>Runs the given command in the system and returns the output.</doc>
+<arguments>
+<arg>%{JAVA_HOME}${/}javac</arg>
+</arguments>
+<msg timestamp="20210929 21:46:19.270" level="INFO">Running command 'C:\Program Files\Java\jdk1.8.0_202\javac 2&gt;&amp;1'.</msg>
+<status status="PASS" starttime="20210929 21:46:19.193" endtime="20210929 21:46:19.610"></status>
+</kw>
+<status status="PASS" starttime="20210929 21:46:19.182" endtime="20210929 21:46:19.610" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20210929 21:45:58.979" endtime="20210929 21:46:19.612"></status>
+</suite>
+<suite id="s1-s3" name="WebTableTC" source="F:\Anandhi\workspace\robotframework\FirstSampleProject\parallelTests\WebTableTC.robot">
+<test id="s1-s3-t1" name="WebTable Validations">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>https://www.seleniumeasy.com/test/table-sort-search-demo.html</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20210929 21:46:19.622" level="INFO">Opening browser 'chrome' to base url 'https://www.seleniumeasy.com/test/table-sort-search-demo.html'.</msg>
+<status status="PASS" starttime="20210929 21:46:19.621" endtime="20210929 21:46:26.567"></status>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<doc>Returns the number of elements matching ``locator``.</doc>
+<arguments>
+<arg>xpath=//table[@id='example']/tbody/tr</arg>
+</arguments>
+<assign>
+<var>${row}</var>
+</assign>
+<msg timestamp="20210929 21:46:26.580" level="INFO">${row} = 10</msg>
+<status status="PASS" starttime="20210929 21:46:26.568" endtime="20210929 21:46:26.580"></status>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<doc>Returns the number of elements matching ``locator``.</doc>
+<arguments>
+<arg>xpath=//table[@id='example']/thead/tr/th</arg>
+</arguments>
+<assign>
+<var>${col}</var>
+</assign>
+<msg timestamp="20210929 21:46:26.590" level="INFO">${col} = 6</msg>
+<status status="PASS" starttime="20210929 21:46:26.580" endtime="20210929 21:46:26.590"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>"Number of Rows: ",${row}</arg>
+</arguments>
+<status status="PASS" starttime="20210929 21:46:26.590" endtime="20210929 21:46:26.591"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>"Number of Col : ",${col}</arg>
+</arguments>
+<status status="PASS" starttime="20210929 21:46:26.592" endtime="20210929 21:46:26.592"></status>
+</kw>
+<kw name="Get Table Cell" library="SeleniumLibrary">
+<doc>Returns contents of a table cell.</doc>
+<arguments>
+<arg>xpath=//table[@id='example']</arg>
+<arg>4</arg>
+<arg>3</arg>
+</arguments>
+<assign>
+<var>${cellData}</var>
+</assign>
+<msg timestamp="20210929 21:46:26.891" level="INFO">${cellData} = Tokyo</msg>
+<status status="PASS" starttime="20210929 21:46:26.593" endtime="20210929 21:46:26.891"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>"Data in a cell(4,3): ",${cellData}</arg>
+</arguments>
+<status status="PASS" starttime="20210929 21:46:26.892" endtime="20210929 21:46:26.892"></status>
+</kw>
+<kw name="Table Cell Should Contain" library="SeleniumLibrary">
+<doc>Verifies table cell contains text ``expected``.</doc>
+<arguments>
+<arg>xpath=//table[@id='example']</arg>
+<arg>4</arg>
+<arg>3</arg>
+<arg>Tokyo</arg>
+</arguments>
+<msg timestamp="20210929 21:46:26.946" level="INFO">Table cell contains 'Tokyo'.</msg>
+<status status="PASS" starttime="20210929 21:46:26.893" endtime="20210929 21:46:26.946"></status>
+</kw>
+<kw name="Table Column Should Contain" library="SeleniumLibrary">
+<doc>Verifies table column contains text ``expected``.</doc>
+<arguments>
+<arg>xpath=//table[@id='example']</arg>
+<arg>3</arg>
+<arg>Office</arg>
+</arguments>
+<status status="PASS" starttime="20210929 21:46:26.947" endtime="20210929 21:46:26.990"></status>
+</kw>
+<kw name="Table Row Should Contain" library="SeleniumLibrary">
+<doc>Verifies that table row contains text ``expected``.</doc>
+<arguments>
+<arg>xpath=//table[@id='example']</arg>
+<arg>8</arg>
+<arg>Edinburgh</arg>
+</arguments>
+<status status="PASS" starttime="20210929 21:46:26.990" endtime="20210929 21:46:27.030"></status>
+</kw>
+<kw name="Table Should Contain" library="SeleniumLibrary">
+<doc>Verifies table contains text ``expected``.</doc>
+<arguments>
+<arg>xpath=//table[@id='example']</arg>
+<arg>Pre-Sales Support</arg>
+</arguments>
+<status status="PASS" starttime="20210929 21:46:27.031" endtime="20210929 21:46:27.273"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210929 21:46:27.273" endtime="20210929 21:46:31.454"></status>
+</kw>
+<status status="PASS" starttime="20210929 21:46:19.620" endtime="20210929 21:46:31.455" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20210929 21:46:19.615" endtime="20210929 21:46:31.457"></status>
+</suite>
+<status status="PASS" starttime="20210929 21:45:36.621" endtime="20210929 21:46:31.460"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="7" fail="0">Critical Tests</stat>
+<stat pass="7" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="7" fail="0" id="s1" name="parallelTests">parallelTests</stat>
+<stat pass="1" fail="0" id="s1-s1" name="ScrollTC">parallelTests.ScrollTC</stat>
+<stat pass="5" fail="0" id="s1-s2" name="VariableSample">parallelTests.VariableSample</stat>
+<stat pass="1" fail="0" id="s1-s3" name="WebTableTC">parallelTests.WebTableTC</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
