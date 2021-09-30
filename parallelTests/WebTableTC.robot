@@ -25,9 +25,9 @@ WebTable Validations
     #Verify specific row contain given data
     Table Row Should Contain    xpath=//table[@id='example']    8    Edinburgh   
     
-    # Table Should Contain    xpath=//table[@id='example']    Pre-Sales Support       
+    Table Should Contain    xpath=//table[@id='example']    Pre-Sales Support       
     # To make it fail
-    Table Should Contain    xpath=//table[@id='example']    Marketing        
+    # Table Should Contain    xpath=//table[@id='example']    Marketing        
      Close Browser
     
     
